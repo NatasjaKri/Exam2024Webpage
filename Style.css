@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Her laves forsidebilledet "frontimg" responsive*/
+.frontimg {
+	width:100%;
+	height:auto;
+	}
+@media (min-width:600px) {	.frontimg {max-width: 100%;}
+}
+body, ul {
+	margin:0;
+	padding:0;
+}
+
+nav ul {
+	list-style-type: none; 	/*fjerner punkter*/
+	display:flex; 			/*Sætter listerne i række*/
+	justify-content: center; 
+	background-color:cadetblue; 
+	margin:5px;
+	padding:0px;
+	}
+nav ul li a {
+	color:white;
+	text-decoration: none;
+	font-size:18px;
+	padding: 10px 20px; /*afstand mellem tekst og sider*/
+	display: block;	
+	}
+nav ul li a:hover {
+	background-color:mediumaquamarine;	/*Skifter farve ved hover*/
+	}
+/*Main tekst */
+main, header {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.whatis {
+	display:block;
+	background-color:darkseagreen;
+	padding: 10px;
+	margin:-10px;
+	color:black;
+}
+.whatis2 {
+	display:flex;
+	justify-content:flex-end;
+	background-color:darkseagreen;
+	padding: 10px;
+	margin:-10px;
+	color:black;
+}
+
+
+
+
+
+
+
+/*Footer style -----------------------------------*/
+footer {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-start;
+	background-color: cadetblue;
+	margin-right: 10px;
+	margin-left:10px;
+	padding:15px;
+}
+
+
+
+
