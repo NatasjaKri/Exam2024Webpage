@@ -53,23 +53,46 @@ main, header {
 	color:black;
 }
 /*Buttons for downloading-------------------------*/
-
-.android {
-	background-color:black;
+.iOS {
+	background-color:transparent;
 	border: none;
-	color:white;
-	padding: 25px 30px;
-	text-align: center;
-	text-decoration: none;
-	display:inline-block;
-	font-size:16px;
-	margin:4px 2px;
+	padding: 0px;
+	display:flex;
+	margin: 0px;
 	cursor:pointer;			/*cursor bliver til klik ikon*/
-	border-radius: 25px;	/*afrunder knappen*/
+	border-radius: 0px;		/*afrunder knappen*/
 }
 
+.android {
+	background-color:transparent;
+	border: none;
+	color:white;
+	padding: 0px;
+	display:flex;
+	margin: 0px;
+	cursor:pointer;			/*cursor bliver til klik ikon*/
+	border-radius: 0px;		/*afrunder knappen*/
+}
 
-
+.play {
+	background-color:orange;
+	border: none;
+	color:white;
+	padding: 20px 20px;
+	display:flex;
+	font-size:18px;
+	margin:5px 2px;
+	cursor:pointer;			/*cursor bliver til klik ikon*/
+	border-radius: 25px;	/*afrunder knappen*/
+	box-shadow: 0px 0px 5px 6px orangered; 	/**/
+}
+.playnow {
+	display: grid;
+	margin-bottom: 50px;
+	margin-top:50px;
+	justify-content:flex-start;
+	
+}
 
 
 
