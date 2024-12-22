@@ -52,7 +52,21 @@ main, header {
 	margin:-10px;
 	color:black;
 }
+/*Buttons for downloading-------------------------*/
 
+.android {
+	background-color:black;
+	border: none;
+	color:white;
+	padding: 25px 30px;
+	text-align: center;
+	text-decoration: none;
+	display:inline-block;
+	font-size:16px;
+	margin:4px 2px;
+	cursor:pointer;			/*cursor bliver til klik ikon*/
+	border-radius: 25px;	/*afrunder knappen*/
+}
 
 
 
