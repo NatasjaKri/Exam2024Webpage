@@ -29,34 +29,21 @@ body, ul {
 }
 
 /*----nav menu--------------------------------*/
-nav  {
-	background-color: cadetblue;
+.navbar {
 	display: flex;
-	flex-direction: row;
 	justify-content:space-between;
-	height: 60px;
 	align-items: center;
+	background-color: cadetblue;
+	padding: 10px 20px
 }
-
 .menu {
 	display: flex;
-	flex-direction: row;
-	list-style-type:none;
-	position: sticky;
+	list-style: none;
 }
 
 .menu li {
-	color: greenyellow;
-	padding:15px;
+	margin:0 10px;
 	}
-
-.menu-box {
-	display: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
 
 .menu a {
 	color: red;
@@ -64,8 +51,60 @@ nav  {
 	font-family:"Hoefler Text","Times New Roman", "serif";
 	font-weight: normal;
 	font-style: normal;
+	font-size: 18px;
+}
+.menu-box {
+	display: none;
+	cursor: pointer;
+}
+.menu-box div {
+	width: 25px;
+	height: 3px;
+	background-color: beige;
+	margin: 3px;
+	transition: all 0.3s ease;
+	border-radius: 10px;
 }
 
+#menu-active {
+	display: none;		/*checkbox usynlig*/
+}
+@media (max-width: 700px) {
+	.menu {
+		display: none;
+		flex-direction: column;
+		width:100%;
+	}
+	.menu li {
+		text-align: center;
+		padding:10px 0;
+		width:100%;
+		
+	}
+	.menu-box {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+				
+	}
+	
+	#menu-active:checked + .menu-box + .menu {
+		display:flex;
+	}
+	#menu-active:checked + .menu-box .line1 {			/*line 1*/
+		transform:rotate(-45deg) translate(-12px,-2px);
+	}
+	#menu-active:checked + .menu-box .line2 {			/*line 2*/
+		opacity: 0;
+	}
+	#menu-active:checked + .menu-box .line3 {			/*line 3*/
+		transform:rotate(45deg) translate(-35px,-20px);
+	}
+}
+
+
+/*
 .menu-icon, .menu-icon::before, .menu-icon::after {
 	display: block;
 	background-color: red;
@@ -99,7 +138,7 @@ nav  {
 #menu-active:checked + .menu-box .menu-icon {
 	background-color: rgba(0, 0, 0, 0)
 }
-/*
+
 #menu-active {	display: none;}
 .menu-box {display: none;}
 */
@@ -129,8 +168,8 @@ nav  {
 		padding: 10px;
 		transition: height 1s;
 		}
-
-/*-----------burgermenu animation----------------*/
+}
+/*--------------------------*/
  
 
 /*------------Main tekst ------------------------*/
@@ -229,6 +268,4 @@ footer {
 	display: flex;
 	justify-content: flex-end;
 }
-
-
 
