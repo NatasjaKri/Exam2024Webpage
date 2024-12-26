@@ -5,33 +5,135 @@
 .frontimg {
 	width:100%;
 	height:auto;
-	}
-@media (min-width:600px) {	.frontimg {max-width: 100%;}
 }
 body, ul {
+	background-color: beige;
 	margin:0;
-	padding:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+/*Responsive til */
+.container{
+	margin-left: 200px;
+	margin-right:200px;
 }
 
-nav ul {
-	list-style-type: none; 	/*fjerner punkter*/
-	display:flex; 			/*Sætter listerne i række*/
-	justify-content: center; 
-	background-color:cadetblue; 
-	margin:5px;
-	padding:0px;
+@media (max-width:800px) {
+	.container {
+		margin:15px;	
 	}
-nav ul li a {
-	color:white;
+	.navigation {
+		font-size:18px;	
+	}
+}
+
+/*----nav menu--------------------------------*/
+nav  {
+	background-color: cadetblue;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	height: 60px;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	list-style-type:none;
+	position: sticky;
+}
+
+.menu li {
+	color: greenyellow;
+	padding:15px;
+	}
+
+.menu-box {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.menu a {
+	color: red;
 	text-decoration: none;
-	font-size:18px;
-	padding: 10px 20px; /*afstand mellem tekst og sider*/
-	display: block;	
-	}
-nav ul li a:hover {
-	background-color:mediumaquamarine;	/*Skifter farve ved hover*/
-	}
-/*Main tekst */
+	font-family:"Hoefler Text","Times New Roman", "serif";
+	font-weight: normal;
+	font-style: normal;
+}
+
+.menu-icon, .menu-icon::before, .menu-icon::after {
+	display: block;
+	background-color: red;
+	height: 4px;
+	width:30px;
+	position: absolute;
+	border-radius: 2px;
+	transition: transform 1s;
+	margin-right: 80px;
+}
+
+.menu-icon ::before {
+	content:"";
+	margin-top: -8px;
+}
+.menu-icon ::after {
+	content:"";
+	margin-top: 8px;
+}
+
+#menu-active:checked + .menu-box .menu-icon:: before {
+	margin-top:0;
+	transform:rotate(45deg);
+}
+	
+#menu-active:checked + .menu-box .menu-icon:: after {
+	margin-top:0;
+	transform:rotate(-45deg);
+}
+	
+#menu-active:checked + .menu-box .menu-icon {
+	background-color: rgba(0, 0, 0, 0)
+}
+/*
+#menu-active {	display: none;}
+.menu-box {display: none;}
+*/
+@media screen and (max-width: 600px) {
+	.menu-box {
+		display:flex;
+		}
+	.menu {
+		position:absolute;
+		top:0;
+		left:0;
+		margin-top: 250px;
+		background-color: darkseagreen;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		}
+	#menu-active ~.menu li{
+		height: 0;
+		margin: 0;
+		padding:0;
+		transition: height 1s;
+		}
+	#menu-active:checked ~ .menu li {
+		height: 50px;
+		padding: 10px;
+		transition: height 1s;
+		}
+
+/*-----------burgermenu animation----------------*/
+ 
+
+/*------------Main tekst ------------------------*/
 main, header {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -93,8 +195,22 @@ main, header {
 	justify-content:flex-start;
 	
 }
-
-
+/*Contact form -----------------------------------*/
+.contact-form {
+	display: grid;
+	justify-content:flex-start;
+}
+.input-text {
+	border-radius: 5px;
+	width: 100%;
+	padding:10px 300px 15px 10px;
+	margin: 2px 0;
+	font-size:14px;
+	box-sizing: border-box;
+	border-color: #2D4B4C;
+	border-width: 3px;
+	box-shadow: 0 0 0 0 ;		/*Hvordan fjerne sort kant?*/	
+}
 
 /*Footer style -----------------------------------*/
 footer {
@@ -102,11 +218,17 @@ footer {
 	list-style-type: none;
 	justify-content: flex-start;
 	background-color: cadetblue;
-	margin-right: 10px;
-	margin-left:10px;
+	margin-right: 0px;
+	margin-left:0px;
 	padding:15px;
 }
-
+.footer-info {
+	margin: 10px 200px 50px 200px;
+}
+.footer-logos {
+	display: flex;
+	justify-content: flex-end;
+}
 
 
 
