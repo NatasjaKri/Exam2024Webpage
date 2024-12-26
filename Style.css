@@ -7,12 +7,14 @@
 	height:auto;
 }
 body, ul {
-	background-color: beige;
+	background-color:beige;
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
+ul {background-color: cadetblue}
+
 /*Responsive til */
 .container{
 	margin-left: 200px;
@@ -28,151 +30,78 @@ body, ul {
 	}
 }
 
-/*----nav menu--------------------------------*/
+/*----nav menu------------------------------------------*/
 .navbar {
-	display: flex;
+	display:flex;
 	justify-content:space-between;
-	align-items: center;
+	align-items:center;
 	background-color: cadetblue;
-	padding: 10px 20px
+	padding: 12px 50px;
 }
+
+.navbar a:hover{
+	color:white;
+	text-shadow: 0px 0px 10px black;
+}
+
 .menu {
 	display: flex;
 	list-style: none;
 }
 
 .menu li {
-	margin:0 10px;
+	margin:5px 30px 5px 0px;
+	
 	}
 
 .menu a {
-	color: red;
+	color: beige;
 	text-decoration: none;
 	font-family:"Hoefler Text","Times New Roman", "serif";
-	font-weight: normal;
-	font-style: normal;
-	font-size: 18px;
+	font-weight: bold;
+	font-style:normal;
+	font-size: 24px;
 }
+/*--------burgermenu ved alm screen------*/
 .menu-box {
 	display: none;
 	cursor: pointer;
 }
+
+/*--------burgermenu---------------------*/
 .menu-box div {
-	width: 25px;
-	height: 3px;
+	width: 30px;
+	height: 5px;
 	background-color: beige;
-	margin: 3px;
-	transition: all 0.3s ease;
-	border-radius: 10px;
+	margin: 5px;
+	transition: all 0.5s ease;
+	border-radius: 5px;
+}
+/*--------Searchbar----------------------*/
+.search-form {
+	display: flex;
+	align-items:center;
+}
+.search-form input {
+	padding:5px;
+	font-size: 16px;
+	font-style: italic;
+	border:none;
+	border-radius: 5px;
+	background-color:lightcyan;
+	color:white;
+	cursor: pointer;	
+}
+.search-form button{
+	margin-left:5px;
+	margin-right:-25px;
+}
+.search-form button:hover {
+	background-color:lightgrey;
 }
 
-#menu-active {
-	display: none;		/*checkbox usynlig*/
-}
-@media (max-width: 700px) {
-	.menu {
-		display: none;
-		flex-direction: column;
-		width:100%;
-	}
-	.menu li {
-		text-align: center;
-		padding:10px 0;
-		width:100%;
-		
-	}
-	.menu-box {
-		display:flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-				
-	}
-	
-	#menu-active:checked + .menu-box + .menu {
-		display:flex;
-	}
-	#menu-active:checked + .menu-box .line1 {			/*line 1*/
-		transform:rotate(-45deg) translate(-12px,-2px);
-	}
-	#menu-active:checked + .menu-box .line2 {			/*line 2*/
-		opacity: 0;
-	}
-	#menu-active:checked + .menu-box .line3 {			/*line 3*/
-		transform:rotate(45deg) translate(-35px,-20px);
-	}
-}
-
-
-/*
-.menu-icon, .menu-icon::before, .menu-icon::after {
-	display: block;
-	background-color: red;
-	height: 4px;
-	width:30px;
-	position: absolute;
-	border-radius: 2px;
-	transition: transform 1s;
-	margin-right: 80px;
-}
-
-.menu-icon ::before {
-	content:"";
-	margin-top: -8px;
-}
-.menu-icon ::after {
-	content:"";
-	margin-top: 8px;
-}
-
-#menu-active:checked + .menu-box .menu-icon:: before {
-	margin-top:0;
-	transform:rotate(45deg);
-}
-	
-#menu-active:checked + .menu-box .menu-icon:: after {
-	margin-top:0;
-	transform:rotate(-45deg);
-}
-	
-#menu-active:checked + .menu-box .menu-icon {
-	background-color: rgba(0, 0, 0, 0)
-}
-
-#menu-active {	display: none;}
-.menu-box {display: none;}
-*/
-@media screen and (max-width: 600px) {
-	.menu-box {
-		display:flex;
-		}
-	.menu {
-		position:absolute;
-		top:0;
-		left:0;
-		margin-top: 250px;
-		background-color: darkseagreen;
-		flex-direction: column;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		}
-	#menu-active ~.menu li{
-		height: 0;
-		margin: 0;
-		padding:0;
-		transition: height 1s;
-		}
-	#menu-active:checked ~ .menu li {
-		height: 50px;
-		padding: 10px;
-		transition: height 1s;
-		}
-}
-/*--------------------------*/
- 
-
-/*------------Main tekst ------------------------*/
+/*-------------------------------------------------------------*/
+/*------------Main tekst --------------------------------------*/
 main, header {
 	padding-right: 20px;
 	padding-left: 20px;
@@ -269,3 +198,44 @@ footer {
 	justify-content: flex-end;
 }
 
+
+/*---------Responsiveness for burgermenu ---------------*/
+
+#menu-active {
+	display: none;		/*checkbox usynlig*/
+}
+@media (max-width: 800px) {
+	.menu {
+		display: none;
+		flex-direction: column;
+		width:100%;
+	}
+	.menu li {
+		text-align: center;
+		padding:10px 0;
+		width:100%;
+		
+	}
+	.menu-box {
+		display:block;				
+	}
+	
+	#menu-active:checked + .menu-box + .menu {
+		display:flex;
+	}
+	#menu-active:checked + .menu-box .line1 {			/*line 1*/
+		transform:rotate(-45deg) translate(-12px,-10px);
+	}
+	#menu-active:checked + .menu-box .line2 {			/*line 2*/
+		opacity: 0;
+	}
+	#menu-active:checked + .menu-box .line3 {			/*line 3*/
+		transform:rotate(45deg) translate(-35px,-20px);
+	}
+.container {
+		margin:15px;	
+	}
+	.navigation {
+		font-size:18px;	
+	}
+} 
