@@ -37,23 +37,22 @@ ul {background-color: cadetblue}
 	align-items:center;
 	background-color: cadetblue;
 	padding: 12px 50px;
-}
-
+	overflow:hidden;
+	position: sticky;
+	top: 0;
+	}
 .navbar a:hover{
 	color:white;
 	text-shadow: 0px 0px 10px black;
-}
+	}
 
 .menu {
 	display: flex;
 	list-style: none;
-}
-
+	}
 .menu li {
 	margin:5px 30px 5px 0px;
-	
 	}
-
 .menu a {
 	color: beige;
 	text-decoration: none;
@@ -61,12 +60,13 @@ ul {background-color: cadetblue}
 	font-weight: bold;
 	font-style:normal;
 	font-size: 24px;
-}
+	}
+
 /*--------burgermenu ved alm screen------*/
 .menu-box {
 	display: none;
 	cursor: pointer;
-}
+	}
 
 /*--------burgermenu---------------------*/
 .menu-box div {
@@ -76,7 +76,7 @@ ul {background-color: cadetblue}
 	margin: 5px;
 	transition: all 0.5s ease;
 	border-radius: 5px;
-}
+	}
 /*--------Searchbar----------------------*/
 .search-form {
 	display: flex;
@@ -101,6 +101,8 @@ ul {background-color: cadetblue}
 }
 
 /*-------------------------------------------------------------*/
+ 
+
 /*------------Main tekst --------------------------------------*/
 main, header {
 	padding-right: 20px;
@@ -113,7 +115,7 @@ main, header {
 	padding: 10px;
 	margin:-10px;
 	color:black;
-}
+	}
 .whatis2 {
 	display:flex;
 	justify-content:flex-end;
@@ -121,48 +123,71 @@ main, header {
 	padding: 10px;
 	margin:-10px;
 	color:black;
+	}
+
+/*-------Play now image--------------------------------------*/
+#playimg {
+	display:block;
+	width: 100%;
+	height: auto;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 140px;
+	border: 1px solid #FA8312;
+	box-shadow: 0 0 8px 1px darkred;
+	}
+.container2 {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
 }
 /*Buttons for downloading-------------------------*/
-.iOS {
-	background-color:transparent;
-	border: none;
-	padding: 0px;
+.play-button {
+	position: absolute;
 	display:flex;
-	margin: 0px;
-	cursor:pointer;			/*cursor bliver til klik ikon*/
-	border-radius: 0px;		/*afrunder knappen*/
-}
-
-.android {
-	background-color:transparent;
-	border: none;
-	color:white;
-	padding: 0px;
-	display:flex;
-	margin: 0px;
-	cursor:pointer;			/*cursor bliver til klik ikon*/
-	border-radius: 0px;		/*afrunder knappen*/
-}
-
-.play {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-color:orange;
-	border: none;
 	color:white;
+	border: none;
 	padding: 20px 20px;
+	margin:5px 2px;
+	font-size:18px;
+	border-radius: 25px;	/*afrunder knappen*/
+	box-shadow: 0px 0px 5px 6px orangered; 	
+	cursor:pointer;			/*cursor bliver til klik ikon*/
+	}
+
+.iOS {
+	position: absolute;
 	display:flex;
+	top:78%;
+	left: 40%;
+	transform: translate(-40%, -70%);
+	background-color: transparent;
+	padding: 20px 20px;
+	border: none;
 	font-size:18px;
 	margin:5px 2px;
-	cursor:pointer;			/*cursor bliver til klik ikon*/
-	border-radius: 25px;	/*afrunder knappen*/
-	box-shadow: 0px 0px 5px 6px orangered; 	/**/
+	cursor:pointer;	
 }
-.playnow {
-	display: grid;
-	margin-bottom: 50px;
-	margin-top:50px;
-	justify-content:flex-start;
-	
+.android {
+	position: absolute;
+	display:flex;
+	top:78%;
+	right: 20%;
+	transform: translate(-80%, -70%);
+	background-color: transparent;
+	border: none;
+	font-size:18px;
+	margin:5px 2px;
+	padding: 20px 20px;
+	cursor:pointer;		/*afrunder knappen*/
 }
+
+
 /*Contact form -----------------------------------*/
 .contact-form {
 	display: grid;
@@ -238,4 +263,5 @@ footer {
 	.navigation {
 		font-size:18px;	
 	}
+
 } 
