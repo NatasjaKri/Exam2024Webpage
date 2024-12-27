@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*Her laves forsidebilledet "frontimg" responsive*/
 .frontimg {
 	width:100%;
 	height:auto;
@@ -21,7 +20,7 @@ ul {background-color: cadetblue}
 	margin-right:200px;
 }
 
-@media (max-width:800px) {
+@media (max-width:1200px) {
 	.container {
 		margin:15px;	
 	}
@@ -46,6 +45,13 @@ ul {background-color: cadetblue}
 	color:white;
 	text-shadow: 0px 0px 10px black;
 	}
+
+/*--highlight current menu------------------*/
+#about-title a{
+	color:white;
+	text-shadow: 0px 0px 10px black;
+	}
+/*------------------------------------------*/
 
 .menu {
 	display: flex;
@@ -100,111 +106,50 @@ ul {background-color: cadetblue}
 .search-form button:hover {
 	background-color:lightgrey;
 }
-
-/*-------------------------------------------------------------*/
- 
-
-/*------------Main tekst --------------------------------------*/
-main, header {
-	padding-right: 20px;
-	padding-left: 20px;
+/*------------------------------------------------*/
+/*--about section---------------------------------*/
+.GH-who h1 {
+	margin-left: 80px;
+	margin-right: 80px;
+	padding-top:50px;
+	border-bottom: thin dotted  #959587;
+	font-size:30px;
 }
 
-.whatis {
-	display:block;
-	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
-	color:black;
-	border-radius: 5px;
-	}
-.whatis-text{
-	margin-right:40px;
-	margin-left:40px;
+.GH-who p {
+	margin-left:100px;
+	margin-right: 100px;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	font-size: 18px;
-	font-family: "Palatino Linotype","Times New Roman","serif";
+	line-height: 1.35;
+	padding-bottom: 50px;
 }
-
-.whatis2 {
-	display:block;
-	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
-	color:black;
-	border-radius: 5px;
-	}
-.whatis-text2{
-	margin-right:40px;
-	margin-left:40px;
+/*--------*/
+.GH-tycoon {
+	display: flex;
+	background-color: darkseagreen;
+	flex-flow:wrap;
+}
+.GH-tycoon h2 {
+	margin-left: 80px;
+	margin-right: 80px;
+	padding-top:50px;
+	font-size:40px;
+	
+}
+.GH-tycoon p {
+	margin-left:100px;
+	margin-right: 100px;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	font-size: 18px;
-	font-family: "Palatino Linotype","Times New Roman","serif";
+	line-height: 1.35;
+	padding-bottom: 50px;
 }
-
-/*-------Play now image--------------------------------------*/
-#playimg {
-	display:block;
-	width: 100%;
-	height: auto;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 140px;
-	border: 1px solid #FA8312;
-	border-radius:5px;
-	box-shadow: 0 0 8px 1px darkred;
-	}
-.container2 {
-	position:relative;
-	display: block;
-	width: 100%;
-	height: auto;
+.GH-tycoon img {
+	width: 15%;
+	display: flex;
+	
 }
-/*Buttons for downloading-------------------------*/
-.play-button {
-	position: absolute;
-	display:flex;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color:orange;
-	color:white;
-	border: none;
-	padding: 20px 20px;
-	margin:5px 2px;
-	font-size:18px;
-	border-radius: 25px;	/*afrunder knappen*/
-	box-shadow: 0px 0px 5px 6px orangered; 	
-	cursor:pointer;			/*cursor bliver til klik ikon*/
-	}
-
-.iOS {
-	position: absolute;
-	display:flex;
-	top:78%;
-	left: 40%;
-	transform: translate(-40%, -70%);
-	background-color: transparent;
-	padding: 20px 20px;
-	border: none;
-	font-size:18px;
-	margin:5px 2px;
-	cursor:pointer;	
-}
-.android {
-	position: absolute;
-	display:flex;
-	top:78%;
-	right: 20%;
-	transform: translate(-80%, -70%);
-	background-color: transparent;
-	border: none;
-	font-size:18px;
-	margin:5px 2px;
-	padding: 20px 20px;
-	cursor:pointer;		/*afrunder knappen*/
-}
-
 
 /*Contact form -----------------------------------*/
 .contact-form {
@@ -238,7 +183,7 @@ footer {
 }
 .footer-logos {
 	display: flex;
-	justify-content: flex-end;
+	justify-content:flex-start;
 }
 
 
@@ -247,7 +192,12 @@ footer {
 #menu-active {
 	display: none;		/*checkbox usynlig*/
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+	/*about text*/
+	.GH-who p h1 {
+		margin-left:40px;
+		margin-right: 40px;
+	}
 	.container {
 		margin:15px;	
 	}
