@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-.frontimg {
-	width:100%;
-	height:auto;
-}
 body, ul {
 	background-color:beige;
 	margin:0;
@@ -15,14 +11,29 @@ body, ul {
 ul {background-color: cadetblue}
 
 /*Responsive til */
-.container{
-	margin-left: 200px;
-	margin-right:200px;
-}
+.frontimg {
+	width:100%;
+	height:auto;	
+	}
 
-@media (max-width:1200px) {
+.container{
+	margin-left:15%;
+	margin-right:15%;
+	}
+
+@media (max-width:1160px) {
 	.container {
-		margin:15px;	
+		margin-left:10%;
+		margin-right:10%;	
+	}
+	.navigation {
+		font-size:18px;	
+	}
+}
+@media (max-width:600px) {
+	.container {
+		margin-left:5%;
+		margin-right:5%;	
 	}
 	.navigation {
 		font-size:18px;	
@@ -177,39 +188,33 @@ footer {
 	margin-right: 0px;
 	margin-left:0px;
 	padding:15px;
+	border-radius: 10px;
 }
 .footer-info {
-	margin: 10px 200px 50px 200px;
+	margin: 10% 20% 15% 20%;
 }
 .footer-logos {
 	display: flex;
 	justify-content:flex-start;
 }
-
+.submit-button {
+	border-radius: 4px;
+}
 
 /*---------Responsiveness for burgermenu ---------------*/
 
 #menu-active {
 	display: none;		/*checkbox usynlig*/
 }
-@media (max-width: 1200px) {
+@media (max-width: 1160px) {
 	/*about text*/
 	.GH-who p h1 {
-		margin-left:40px;
-		margin-right: 40px;
-	}
-	.container {
-		margin:15px;	
-	}
-	.navigation {
-		font-size:18px;	
-	}
-	footer {
-		width: 100%;
+		margin-left:10%;
+		margin-right:10%;
 	}
 	.footer-info {
 		width: 100%;
-		margin: 10px 200px 10px 200px;
+		margin: 1% 20% 1% 20%;
 	}
 	.input-text {
 		padding: 10px 10px 15px 10px;
@@ -224,7 +229,6 @@ footer {
 		text-align: center;
 		padding:10px 0;
 		width:100%;
-		
 	}
 	.menu-box {
 		display:block;				

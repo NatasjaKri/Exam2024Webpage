@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/*Her laves forsidebilledet "frontimg" responsive*/
 body, ul {
 	background-color:beige;
 	margin:0;
@@ -10,38 +9,40 @@ body, ul {
 	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
 ul {background-color: cadetblue}
-/*-------------------------------------------------------------*/
-/*---------------Responsive elementer------------------------ */
+
+/*responsive elementer*/
 .frontimg {
 	width:100%;
 	height:auto;	
-}
+	}
 
 .container{
 	margin-left:15%;
 	margin-right:15%;
-}
+	}
+
 
 @media (max-width:1160px) {
 	.container {
 		margin-left:10%;
 		margin-right:10%;	
-		}
+	}
 	.navigation {
 		font-size:18px;	
-		}
+	}
 }
 @media (max-width:600px) {
 	.container {
 		margin-left:5%;
 		margin-right:5%;	
-		}
+	}
 	.navigation {
 		font-size:18px;	
-		}
+	}
 }
-/*-------------------------------------------------------------*/
-/*----------navigation----------------------------------------*/
+
+
+/*----nav menu------------------------------------------*/
 .navbar {
 	display:flex;
 	justify-content:space-between;
@@ -56,7 +57,14 @@ ul {background-color: cadetblue}
 .navbar a:hover{
 	color:white;
 	text-shadow: 0px 0px 10px black;
-}
+	}
+
+/*--highlight current menu------------------*/
+#guide-title a{
+	color:white;
+	text-shadow: 0px 0px 10px black;
+	}
+/*------------------------------------------*/
 
 .menu {
 	display: flex;
@@ -74,13 +82,13 @@ ul {background-color: cadetblue}
 	font-size: 24px;
 	}
 
-/*----burgermenu ved alm screen------*/
+/*--------burgermenu ved alm screen------*/
 .menu-box {
 	display: none;
 	cursor: pointer;
 	}
 
-/*----burgermenu---------------------*/
+/*--------burgermenu---------------------*/
 .menu-box div {
 	width: 30px;
 	height: 5px;
@@ -89,7 +97,7 @@ ul {background-color: cadetblue}
 	transition: all 0.5s ease;
 	border-radius: 5px;
 	}
-/*----Searchbar----------------------*/
+/*--------Searchbar----------------------*/
 .search-form {
 	display: flex;
 	align-items:center;
@@ -112,64 +120,98 @@ ul {background-color: cadetblue}
 	background-color:lightgrey;
 }
 
-/*----highlight current menu----------*/
-#home-title a{
-	color:white;
-	text-shadow: 0px 0px 10px black;
+/*---------------------------------------------------------------*/
+/*-----Side menu------------------------------------------------*/
+.sidenav { 
+	width: 200px;
+	position:fixed; 
+	top:500px; 
+	left:10px; 
+	background-color:transparent; 
+	overflow-x: hidden;  	
+}
+.sidenav a {
+	text-decoration: none;
+	color: black;
+	font-size:20px;
+}
+.sidenav li {
+	list-style:none;
+	margin: 20px 10px 0px 30px;
+}
+
+.sidenav li:hover { 
+	border-bottom: thin solid #C6C6A1;
+}
+
+@media (max-width:1160px) {.sidenav{display: none;}}
+
+/*---------------------------------------------------------------*/
+/*-----content ---------------------------------------------*/
+.news p {
+	font-size: 22px;
+	font-weight: 800;
+	margin-bottom: 10px;
+	border-bottom: thin solid #88885E;
 	}
 
-/*-------------------------------------------------------------*/
-/*------------Main tekst -------------------------------------*/
-main, header {
-	padding-right: 20px;
-	padding-left: 20px;
-}
-
-.header-title {
-	margin-right:50px;
-	margin-left:50px; 
-}
-
-.whatis {
-	display:block;
-	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
-	color:black;
-	border-radius: 5px;
+.page-text {
+	margin-left: 0px;
+	margin-right: 0px;
 	}
-.whatis-text{
-	margin-right:50px;
-	margin-left:50px;
-	font-size: 18px;
-	font-family: "Palatino Linotype","Times New Roman","serif";
-}
-
-.whatis2 {
-	display:block;
-	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
-	color:black;
-	border-radius: 5px;
+.about1 {
+	
 	}
-.whatis-text2{
-	margin-right:40px;
-	margin-left:40px;
-	font-size: 18px;
-	font-family: "Palatino Linotype","Times New Roman","serif";
-}
 
-/*----Play now image-------------------*/
+.img80s {
+	width: 100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: thin dotted #88885E;
+	}
+.stage1img {
+	width:100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: thin dotted #88885E;
+}
+.officeimg{
+	width:100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: thin dotted #88885E;
+}
+.stage2img {
+	width:100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: thin dotted #88885E;
+}
+.projectimg {
+	width:100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: thin dotted #88885E;
+}
+/*----play now-------------------------*/
 #playimg {
 	display:block;
 	width: 100%;
 	height: auto;
 	margin-left: 0px;
 	margin-right: 0px;
-	margin-top: 140px;
+	margin-top: 100px;
+	margin-bottom:100px;
 	border: 1px solid #FA8312;
 	border-radius:5px;
 	box-shadow: 0 0 8px 1px darkred;
@@ -201,9 +243,9 @@ main, header {
 .iOS {
 	position: absolute;
 	display:flex;
-	top:78%;
+	top:85%;
 	left: 40%;
-	transform: translate(-40%, -70%);
+	transform: translate(-50%, -70%);
 	background-color: transparent;
 	padding: 20px 20px;
 	border: none;
@@ -214,9 +256,9 @@ main, header {
 .android {
 	position: absolute;
 	display:flex;
-	top:78%;
+	top:85%;
 	right: 20%;
-	transform: translate(-80%, -70%);
+	transform: translate(-55%, -70%);
 	background-color: transparent;
 	border: none;
 	font-size:18px;
@@ -226,29 +268,8 @@ main, header {
 }
 
 /*-------------------------------------------------------------*/
-
-
-
-/*------Footer style -----------------------------------*/
-footer {
-	display: flex;
-	list-style-type: none;
-	justify-content: flex-start;
-	background-color: cadetblue;
-	margin-right: 0px;
-	margin-left:0px;
-	padding:15px;
-	border-radius: 10px;
-}
-.footer-info {
-	margin: 10% 20% 15% 20%;
-}
-.footer-logos {
-	display: flex;
-	justify-content: flex-end;
-}
-
-/*------------Contact form --------------*/
+/*---------------------------------------------------------------*/
+/*-----Contact form ---------------------------------------------*/
 .contact-form {
 	display: grid;
 	justify-content:flex-start;
@@ -264,27 +285,49 @@ footer {
 	border-width: 3px;
 	box-shadow: 0 0 0 0 ;		/*Hvordan fjerne sort kant?*/	
 }
+
+/*Footer style -----------------------------------*/
+footer {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-start;
+	background-color: cadetblue;
+	margin-right: 0px;
+	margin-left:0px;
+	padding:15px;
+	border-radius: 10px;
+}
+.footer-info {
+	margin: 10px 200px 50px 200px;
+}
+.footer-logos {
+	display: flex;
+	justify-content:flex-start;
+}
 .submit-button {
 	border-radius: 4px;
 }
 
-/*-------------------------------------------------------------*/
-/*---------Responsiveness  -----------------------------------*/
+/*---------Responsiveness for burgermenu ---------------*/
 
 #menu-active {
 	display: none;		/*checkbox usynlig*/
 }
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
+	/*about text*/
+	footer {
+		width: 100%;
+	}
 	.footer-info {
 		width: 100%;
-		margin: 1% 20% 1% 20%;
+		margin: 10px 200px 10px 200px;
 	}
 	.input-text {
 		padding: 10px 10px 15px 10px;
 	}
-/*---------for burgermenu-----------------*/	
+/*--------------------------*/	
 	.menu {
-		display:none;
+		display: none;
 		flex-direction: column;
 		width:100%;
 	}
@@ -310,5 +353,6 @@ footer {
 	#menu-active:checked + .menu-box .line3 {			/*line 3*/
 		transform:rotate(45deg) translate(-35px,-20px);
 	}
-	
-}
+
+
+} 
