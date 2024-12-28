@@ -117,29 +117,34 @@ ul {background-color: cadetblue}
 .search-form button:hover {
 	background-color:lightgrey;
 }
-/*------------------------------------------------*/
-/*--about section---------------------------------*/
+/*----------------------------------------------------------*/
+/*-------about section-------------------------------------*/
+
+
 .GH-who h1 {
-	margin-left: 80px;
-	margin-right: 80px;
+	margin-left: 8%;
+	margin-right: 8%;
 	padding-top:50px;
-	border-bottom: thin dotted  #959587;
+	border-bottom: thin dotted #88885E;
 	font-size:30px;
 }
 
 .GH-who p {
-	margin-left:100px;
-	margin-right: 100px;
+	margin-left: 10%;
+	margin-right: 10%;
 	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	font-size: 18px;
 	line-height: 1.35;
 	padding-bottom: 50px;
 }
-/*--------*/
+
+/*-------------------*/
 .GH-tycoon {
 	display: flex;
 	background-color: darkseagreen;
 	flex-flow:wrap;
+	border-radius: 10px;
+	border:10px double beige;
 }
 .GH-tycoon h2 {
 	margin-left: 80px;
@@ -161,6 +166,18 @@ ul {background-color: cadetblue}
 	display: flex;
 	
 }
+/*-------------------*/
+.revenue {
+	display:grid;
+	margin-left:10%;
+	margin-right:10%;
+	font-size: 18px;
+	line-height: 1.35;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	margin-bottom: 100px;
+	margin-top:70px;
+}
+.revenue h1{border-bottom: thin dotted #88885E}
 
 /*Contact form -----------------------------------*/
 .contact-form {
@@ -188,7 +205,7 @@ footer {
 	margin-right: 0px;
 	margin-left:0px;
 	padding:15px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 .footer-info {
 	margin: 10% 20% 15% 20%;
