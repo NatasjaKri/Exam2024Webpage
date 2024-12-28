@@ -166,43 +166,44 @@ ul {background-color: cadetblue}
 .img80s {
 	width: 100%;
 	height: auto;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	border-bottom: thin dotted #88885E;
+	border-radius:5px;
 	}
 .stage1img {
 	width:100%;
 	height: auto;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	border-bottom: thin dotted #88885E;
+	border-radius:5px;
 }
 .officeimg{
 	width:100%;
 	height: auto;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	border-bottom: thin dotted #88885E;
+	border-radius:5px;
 }
 .stage2img {
 	width:100%;
 	height: auto;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	border-bottom: thin dotted #88885E;
+	border-radius:5px;
 }
 .projectimg {
 	width:100%;
 	height: auto;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	border-bottom: thin dotted #88885E;
+	border-radius:5px;
 }
+
 /*----play now-------------------------*/
 #playimg {
 	display:block;
