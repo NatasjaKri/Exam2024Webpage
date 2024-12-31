@@ -52,6 +52,7 @@ ul {background-color: cadetblue}
 	position: sticky;
 	top: 0;
 	border-radius: 5px;
+	z-index: 10;
 	}
 .navbar a:hover{
 	color:white;
@@ -101,7 +102,7 @@ ul {background-color: cadetblue}
 	border:none;
 	border-radius: 5px;
 	background-color:lightcyan;
-	color:white;
+	color:black;
 	cursor: pointer;	
 }
 .search-form button{
@@ -121,8 +122,25 @@ ul {background-color: cadetblue}
 /*-------------------------------------------------------------*/
 /*------------Main tekst -------------------------------------*/
 main, header {
-	padding-right: 20px;
-	padding-left: 20px;
+	padding:5% 1% 5% 1%;
+}
+header h1{
+	display:flex;
+	justify-content: center;
+	font-size: 38px;
+}
+header h2 {
+	display:flex;
+	justify-content: center;
+	font-size: 22px;
+	font-weight:normal;
+}
+
+header p{
+	margin-left:5%;
+	margin-right: 5%;
+	font-size: 20px;
+	line-height: 1.35;
 }
 
 .header-title {
@@ -133,31 +151,14 @@ main, header {
 .whatis {
 	display:block;
 	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
+	margin: 20px -5px 20px -5px;
+	padding: 7% 5% 10% 5%;
 	color:black;
 	border-radius: 5px;
 	}
 .whatis-text{
 	margin-right:50px;
 	margin-left:50px;
-	font-size: 18px;
-	font-family: "Palatino Linotype","Times New Roman","serif";
-}
-
-.whatis2 {
-	display:block;
-	background-color:darkseagreen;
-	padding: 10px;
-	margin-left:-5px;
-	margin-right:-5px;
-	color:black;
-	border-radius: 5px;
-	}
-.whatis-text2{
-	margin-right:40px;
-	margin-left:40px;
 	font-size: 18px;
 	font-family: "Palatino Linotype","Times New Roman","serif";
 }
@@ -169,7 +170,7 @@ main, header {
 	height: auto;
 	margin-left: 0px;
 	margin-right: 0px;
-	margin-top: 140px;
+	margin-top: 5%;
 	border: 1px solid #FA8312;
 	border-radius:5px;
 	box-shadow: 0 0 8px 1px darkred;
