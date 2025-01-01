@@ -107,7 +107,7 @@ ul {background-color: cadetblue}
 	border:none;
 	border-radius: 5px;
 	background-color:lightcyan;
-	color:white;
+	color:black;
 	cursor: pointer;	
 }
 .search-form button{
@@ -216,6 +216,9 @@ footer {
 }
 .submit-button {
 	border-radius: 4px;
+}
+.form-submit button:hover {
+	background-color:lightgrey;
 }
 
 /*---------Responsiveness for burgermenu ---------------*/
