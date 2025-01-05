@@ -26,7 +26,7 @@
 	<ul class="menu">
 		<li id="home-title"><a href="index.html">Home</a></li>
 		<li id="guide-title"><a href="guideindex.html">Guide</a></li>
-		<li id="history-title"><a href="historyindex.html">History</a></li>
+		<li id="history-title"><a href="History-index.html">History</a></li>
 		<li id="about-title"><a href="about-index.html">About</a></li>
 		<li id="contact-title"><a href="#contactinfo">Contact</a></li>
 	</ul>
@@ -65,27 +65,31 @@
 	<img src="img/2123.jpg" class="playimg" id="playimg" alt="play-img" />	
 	
 	<!--Computer -->
-	<button class="play-button" href="http://www.greenheartgames.com/game-dev-tycoon-downloads/">
+	<button type="button" class="play-button" href="http://www.greenheartgames.com/game-dev-tycoon-downloads/">
 		<h3>Play Now on PC/Mac/Linux</h3>
 	</button>
+</div>
 	
+<div class="testbox">
 	<!--Android-->	
-	<button class="android" href="https://play.google.com/store/apps/details?id=com.greenheartgames.gdt">
-		<img src="img/Google_Play_Store_badge_EN.svg.png" width="204" height="67px" alt="Google play logo"/>
-	</button>
+	<div class="android" href="https://play.google.com/store/apps/details?id=com.greenheartgames.gdt">
+		<img src="img/Google_Play_Store_badge_EN.svg.png" width="100%" height="auto" alt="Google play logo"/>
+	</div>
 	
 	<!--Apple store -->	
-	<button class="iOS" href="https://itunes.apple.com/us/app/game-dev-tycoon/id1162580001?ls=1&mt=8">
-		<img src="img/app-store-badge.svg" width="200px" alt="Appstore logo"/>
-	</button>
-</div>		
+	<div class="iOS" href="https://itunes.apple.com/us/app/game-dev-tycoon/id1162580001?ls=1&mt=8">
+		<img src="img/app-store-badge.svg" width="100%" height="auto" alt="Appstore logo"/>
+	</div>
+</div>
 	
 <br>
 <!------------------------------------------------->
 <section>
-	<button class="how" href="guideindex.html">	
-		<h3>How to Play</h3>	
-	</button>
+	<div class="how-sec">
+		<button id="how" href="guideindex.html">	
+			<h3>How to Play</h3>	
+		</button>
+	</div>
 </section>
 </main>
 
@@ -105,8 +109,8 @@
 <!--Udfyldningsform som kontakt---------------------------->
 		<li>Alternatively you can fill out the contact form below.</li>
 		<br>
-		
-	<form method="post" action="https://www.greenheartgames.com/wp-admin/admin-ajax.php" id="form" class="contact-form">
+							<!--indsat falsk hjemmeside i action-->
+	<form method="post" action="https://www.greenheartgames.com/fakesubmit" id="form" class="contact-form"> 
 		
 	<!--Name fill out-------->
 		<div class="form-name-input">

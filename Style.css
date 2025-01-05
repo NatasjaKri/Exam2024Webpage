@@ -11,7 +11,7 @@ body, ul {
 }
 ul {background-color: cadetblue}
 /*-------------------------------------------------------------*/
-/*---------------Responsive elementer------------------------ */
+/*---------------Responsive generel-------------------------- */
 .frontimg {
 	width:100%;
 	height:auto;	
@@ -174,12 +174,15 @@ header p{
 	border: 1px solid #FA8312;
 	border-radius:5px;
 	box-shadow: 0 0 8px 1px darkred;
+	
 	}
 .container2 {
 	position:relative;
 	display: block;
 	width: 100%;
 	height: auto;
+	padding-bottom: 50px;
+	
 }
 /*----Buttons for downloading----------*/
 .play-button {
@@ -190,47 +193,80 @@ header p{
 	transform: translate(-50%, -50%);
 	background-color:orange;
 	color:white;
-	border: none;
+	border: 2px;
 	padding: 20px 20px;
 	margin:5px 2px;
-	font-size:18px;
+	font-size:16px;
 	border-radius: 25px;	/*afrunder knappen*/
 	box-shadow: 0px 0px 5px 6px orangered; 	
 	cursor:pointer;			/*cursor bliver til klik ikon*/
 	}
+.play-button:hover{
+	background-color:#FDB100;
+	box-shadow: 0px 0px 5px 6px #F31200; 
+}
 
 .iOS {
-	position: absolute;
-	display:flex;
-	top:78%;
-	left: 40%;
-	transform: translate(-40%, -70%);
-	background-color: transparent;
-	padding: 20px 20px;
-	border: none;
-	font-size:18px;
-	margin:5px 2px;
-	cursor:pointer;	
+		width:200px;
+		height:50px;
+		cursor:pointer;	
+		margin-left: 20px;
+		margin-right: 20px;
 }
 .android {
-	position: absolute;
-	display:flex;
-	top:78%;
-	right: 20%;
-	transform: translate(-80%, -70%);
-	background-color: transparent;
-	border: none;
-	font-size:18px;
-	margin:5px 2px;
-	padding: 20px 20px;
-	cursor:pointer;		/*afrunder knappen*/
+	width: 200px;
+	height:50px;
+	cursor:pointer;	
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.testbox {
+	display: grid;
+	grid-auto-flow:column;
+	justify-content: center;
+	align-items: baseline;
+}
+/*----responsive for download knapper-----------------------*/
+
+@media (max-width:800px) {
+	.play-button {
+		top:80px;
+		background-color: transparent;
+		box-shadow: none;
+		
+	}
+	.play-button:hover{
+		background-color:transparent;
+		box-shadow: none;
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+	.testbox {
+		padding-top: 5%;
+		margin-top:-10%;
+		display: flex;
+		flex-flow: column;
+		align-items: center;		
+		
+	}
+	.android {
+		width: 80%;
+		height:100%;
+		margin-bottom: 10px;
+	}
+	.iOS {
+		width:80%;
+		height:100%;
+	}
+}
+/*-------------------------------------------------------*/
+/*------How to play-------------------------------------*/
+.how-sec {
+	
 }
 
-/*-------------------------------------------------------------*/
-
-
-
-/*------Footer style -----------------------------------*/
+/*-------------------------------------------------------*/
+/*------Footer -----------------------------------------*/
 footer {
 	display: flex;
 	list-style-type: none;
@@ -273,7 +309,7 @@ footer {
 }
 
 /*-------------------------------------------------------------*/
-/*---------Responsiveness  -----------------------------------*/
+/*---------Responsive footer----------------------------------*/
 
 #menu-active {
 	display: none;		/*checkbox usynlig*/
@@ -286,7 +322,7 @@ footer {
 	.input-text {
 		padding: 10px 10px 15px 10px;
 	}
-/*---------for burgermenu-----------------*/	
+/*---------responsive burgermenu-----------------*/	
 	.menu {
 		display:none;
 		flex-direction: column;
